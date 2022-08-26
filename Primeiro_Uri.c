@@ -39,9 +39,9 @@ void Total(struct Lanche *this) {
 
 struct Lanche *criarLanche(int codigo, char especificacao[], double preco) {
   struct Lanche *this = (struct Lanche *)malloc(sizeof(struct Lanche));
-  this->codigo = 0;
-  strcpy(this->especificacao, "");
-  this->preco = 0;
+  this->codigo = codigo;
+  strcpy(this->especificacao, especificacao);
+  this->preco = preco;
 
   this->funcao = &Total;
   return this;
@@ -63,9 +63,6 @@ int main() {
 
   switch (selecionado) {
   case 1:
-    lanche1->codigo = 1;
-    strcpy(lanche1->especificacao, "Cachorro-Quente");
-    lanche1->preco = 4.00;
     printf("O produto selecionado foi:\n%s\nR$: %.2lf\n",
            lanche1->especificacao, lanche1->preco);
 
@@ -73,9 +70,6 @@ int main() {
     free(lanche1);
     break;
   case 2:
-    lanche2->codigo = 2;
-    strcpy(lanche2->especificacao, "X-Salada");
-    lanche2->preco = 4.50;
     printf("O produto selecionado foi:\n%s\nR$: %.2lf\n",
            lanche2->especificacao, lanche2->preco);
 
@@ -83,9 +77,6 @@ int main() {
     free(lanche2);
     break;
   case 3:
-    lanche3->codigo = 3;
-    strcpy(lanche3->especificacao, "X-Bacon");
-    lanche3->preco = 5.00;
     printf("O produto selecionado foi:\n%s\nR$: %.2lf\n",
            lanche3->especificacao, lanche3->preco);
 
@@ -93,9 +84,6 @@ int main() {
     free(lanche3);
     break;
   case 4:
-    lanche4->codigo = 4;
-    strcpy(lanche4->especificacao, "Torrada Simples");
-    lanche4->preco = 2.00;
     printf("O produto selecionado foi:\n%s\nR$: %.2lf\n",
            lanche4->especificacao, lanche4->preco);
 
@@ -103,9 +91,6 @@ int main() {
     free(lanche4);
     break;
   case 5:
-    lanche5->codigo = 5;
-    strcpy(lanche5->especificacao, "Refrigerante");
-    lanche5->preco = 1.50;
     printf("O produto selecionado foi:\n%s\nR$: %.2lf\n",
            lanche5->especificacao, lanche5->preco);
 
